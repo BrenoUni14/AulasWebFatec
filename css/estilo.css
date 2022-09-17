@@ -96,6 +96,55 @@ nav{
 
 }
 
+/* FORMULÁRIO */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+
+
+}
+
+fieldset{
+    width: 60%;
+    border: none;
+    text-align: center;
+    
+}
+
+legend{
+    font-size: bold 2rem;
+
+ 
+}
+
+label{
+    font-size: 1rem;
+}
+
+input, select{
+    padding: 13px;
+    width: 50%;
+    border-radius: 20px;
+    
+    
+}
+
+button{
+    width: 30%;
+    padding: 15px;
+    border-radius: 15px;
+
+}
+
+.required::after{
+    content: " *";
+    color: #dc143c;
+}
+
+
+
 #rodape{
     justify-content: center;
     text-align: center;
@@ -108,9 +157,7 @@ nav{
 
 }
 
-label{
-    font-size: 1.2rem;
-}
+
 
 
 
