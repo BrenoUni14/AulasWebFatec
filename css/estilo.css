@@ -145,6 +145,16 @@ button{
 
 
 
+
+video{
+    width: 60%;
+    height: 40%;
+    align-self: center;
+    border-radius: 15px;
+
+}
+
+
 #rodape{
     justify-content: center;
     text-align: center;
