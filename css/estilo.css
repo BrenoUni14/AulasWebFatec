@@ -96,7 +96,13 @@ nav{
     display: block;
     width: 170px;
 }
+/*Ocultar menu hamburguer*/
 
+label[for="bt_menu"], #bt_menu{
+    display: none;
+}
+
+/*Conteudo*/
 #conteudo{
     min-height: 700px;
     flex-direction: column;
@@ -108,13 +114,9 @@ nav{
 #conteudo h1{
     text-align: center;
     padding-top: 2%;
+    font-size: 2em;
 }
 
-#conteudo p, ol, h2, img{
-    padding: 2%  5%;
-
-
-}
 
 /* FORMULÁRIO */
 form{
@@ -165,7 +167,7 @@ button{
 
 
 
-
+/*Estilizando o vídeo*/
 video{
     width: 60%;
     height: 40%;
@@ -187,9 +189,64 @@ video{
 
 }
 
+/*Media query - barra de acessibilidade*/
+@media screen and (max-width: 1680px){
+    .link_access{
+        margin-left: 45%;
+    }
+}
+@media screen and (max-width: 1345px){
+        .link_access{
+            margin-left: 40%;
+        }
+    }
+@media screen and (max-width: 1230px){
+        .link_access{
+            margin-left: 30%;
+        }
+    }
+@media screen and (max-width: 1024px){
+    .link_access{
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width: 850px){
+    .atalhos{
+        display: none;
+    }
+    .link_access{
+        margin-left: 5%;
+    }
+}
+
+/*Menu query - barra de navegação*/
+
+@media screen and (max-width: 760px){
+    nav{
+        justify-content: left;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu li{
+        padding: 10% 1px;
+    }
+
+    .menu li ul{
+        position: static;
+        float: left;
+    }
+
+    .menu li ul li{
+        position: relative;
+    }
+
+    label[for="bt_menu"]{
+        display: block;
+    }
 
 
-
-
-
+}
 
