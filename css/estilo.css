@@ -13,22 +13,23 @@ body{
 }
 
 .acessibilidade{
-    background-color: white;
+    background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
 
-.atalho, .link_access{
+.atalhos, .links_access{
     list-style: none;
     display: inline-flex;
     padding: 5px;
-} 
-
-.atalho li, .link_access li{
+}
+.atalhos li, .links_access li{
+    
     padding-left: 10px;
 }
 
-.link_access{
+.links_access{
+
     margin-left: 60%;
 }
 
@@ -47,7 +48,7 @@ body{
     width: 40%;
     height: auto;
 }
-
+/*Navegação*/
 nav{
     width: 100%;
     background-color:#dc143c;
@@ -64,7 +65,7 @@ nav{
 
 .menu li{
     position: relative;
-    padding: 10%;
+    padding: 20px 30px;
 }
 
 .menu li a{
@@ -83,7 +84,7 @@ nav{
     display: none;
     position: absolute;
     list-style: none;
-    top: 70px;
+    top: 40px;
     left: 0;
     background-color: #dc143c;
 }
@@ -94,88 +95,83 @@ nav{
 
 .menu li ul li{
     display: block;
-    width: 170px;
+    width: 140px;
 }
-/*Ocultar menu hamburguer*/
+/*ocultar menu hamburguer*/
 
 label[for="bt_menu"], #bt_menu{
     display: none;
 }
 
-/*Conteudo*/
+/* conteúdo */
 #conteudo{
-    min-height: 700px;
+    min-height: 800px;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
 
 }
-
-#conteudo h1{
-    text-align: center;
-    padding-top: 2%;
-    font-size: 2em;
+.breadcrumb{
+    padding-left: 2%;
+    list-style: none;
 }
-
+.breadcrumb li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #000;
+}
+.breadcrumb li a{
+    color: #555;
+}
+.breadcrumb li a:hover{
+    color: #000;
+}
+.breadcrumb li+li::before{
+    content: "/\00a0";
+    padding: 6px;
+    color: #000;
+}
+h1{
+    text-align: center;
+     
+}
+section{
+    padding: 2% 10%; /*acrescentado*/
+}
 
 /* FORMULÁRIO */
+
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-
-
+    align-self: center;
+    padding: 2%;   
 }
-
-fieldset{
-    width: 60%;
-    border: none;
-    text-align: center;
-    
+label, legend{
+    font-size: 0.7em;
 }
-
-legend{
-    font-size: bold 2rem;
-
- 
-}
-
-label{
-    font-size: 1rem;
-}
-
-input, select{
-    padding: 13px;
-    width: 50%;
-    border-radius: 20px;
-    
-    
-}
-
-button{
-    width: 30%;
-    padding: 15px;
+input, select, textarea{
+    padding: 10px;
     border-radius: 15px;
-
+    width: 80%; /*corrigido*/
+    
 }
-
+fieldset{
+    width: 70%; /*corrigido*/
+    border: none;
+    /*padding: 40px;*/ /*corrigido*/
+    margin: auto;
+    
+}
+button{
+    width: 35%; /*corrigido*/
+    padding: 10px;
+        
+}
 .required::after{
     content: " *";
-    color: #dc143c;
-}
-
-
-
-/*Estilizando o vídeo*/
-video{
-    width: 60%;
-    height: 40%;
-    align-self: center;
-    border-radius: 15px;
+    color: red;
 
 }
-
 
 #rodape{
     justify-content: center;
@@ -189,58 +185,59 @@ video{
 
 }
 
-/*Media query - barra de acessibilidade*/
+video{
+    width: 60%;
+    height: auto;
+    align-self: center;
+    border-radius: 15px;
+}
+
+
+/* media queries barra de acessibilidade */
+
 @media screen and (max-width: 1680px){
-    .link_access{
+    .links_access{
+
         margin-left: 45%;
     }
 }
 @media screen and (max-width: 1345px){
-        .link_access{
-            margin-left: 40%;
-        }
+    .links_access{
+
+        margin-left: 40%;
     }
+}
 @media screen and (max-width: 1230px){
-        .link_access{
-            margin-left: 30%;
-        }
+    .links_access{
+
+        margin-left: 30%;
     }
+}
 @media screen and (max-width: 1024px){
-    .link_access{
+    .links_access{
+
         margin-left: 25%;
     }
 }
 @media screen and (max-width: 850px){
+
     .atalhos{
         display: none;
     }
-    .link_access{
+    .links_access{
         margin: auto;
     }
 }
 
-/*Menu query - barra de navegação*/
+/* media queries menu responsivo */
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 740px){
+
     nav{
         justify-content: left;
     }
-
     .menu{
         display: none;
-    }
-
-    .menu li{
-        padding: 10% 1px;
-    }
-
-    .menu li ul{
-        position: static;
-        float: left;
-    }
-
-    .menu li ul li{
-        position: relative;
     }
 
     label[for="bt_menu"]{
@@ -250,8 +247,40 @@ video{
 
     #bt_menu:checked ~ .menu{
         display: block;
+        width: 100%; /*corrigido*/
+
+       
+       
     }
 
+    .menu li{
+        padding: 5% 1px; /*corrigido*/
+        
+        
+    }
+   
+    .menu li ul{
+        position:static; /*acrescentado*/
+        
+    }
+    .menu li ul li{
+        position: relative; /*acrescentado*/
+        display: block; /*acrescentado*/
 
+    }
+     
+    .imagem{
+        width: 60%;
+        height: auto;
+    }
+    
+  
+    video{
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
 }
+
+
 

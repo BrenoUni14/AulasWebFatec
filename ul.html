@@ -13,15 +13,15 @@
 </head>
 <body>
     <div class="acessibilidade flex-container">
-        <ul class="atalho">
-            <li><a href="#conteudo" acesskey="1" title="ir para a área de conteúdo"> Ir para o conteúdo [1]</a></li>
-            <li><a href="#menu" accesskey="2" title="ir para o menu de navegação"> Ir para o menu [2]</a></li>
-            <li> <a href="#rodape" accesskey="3" title="ir para o rodape"> Ir para o rodapé [3]</a></li>
+        <ul class="atalhos">
+            <li><a href="#conteudo" accesskey="1" title="Ir para a área de conteúdo">Ir para o conteúdo [1]</a></li>
+            <li><a href="#menu" accesskey="2" title="Ir para o menu de navegação">Ir para o menu [2]</a></li>
+            <li><a href="#rodape" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></li>
         </ul>
-        <ul class="link_access">
+        <ul class="links_access">
             <li><a href="acessibilidade.html">Acessibilidade</a></li>
-            <li><a href="javascript:void(0);" id="contraste">Contraste </a></li>
-            <li><a href="javascript:void(0);" id="scontraste">Sem Contraste</a></li>
+            <li><a href="javascript:void(0);" id="contraste">Contraste</a></li>
+            <li><a href="javascript:void(0);" id="semcontraste">Sem Contraste</a></li>
             <li><a href="javascript:void(0);" id="aumenta">A+</a></li>
             <li><a href="javascript:void(0);" id="diminui">A-</a></li>
         </ul>
@@ -40,6 +40,8 @@
           </script>
     </header>
     <nav class="flex-container"><!--Navegação-->
+        <label for="bt_menu"><img src="imagem/menu.png" alt="menu"></label>
+        <input type="checkbox" name="bt_menu" id="bt_menu">
         <ul class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
@@ -52,21 +54,28 @@
             
             </li>
             <li><a href="layout.html">Layout</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
+            <li><a href="contato.html">Fale Conosco</a></li>
+            
             
         </ul>
     </nav>
     <main class="flex-container" id="conteudo"><!--Conteúdo-->
+        <ul class="breadcrumb">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="javascript:void(0);">Listas</a></li>
+            <li>Lista não Ordenada</li>
+        </ul>
+        <section>
         <h1>LISTAS NÃO ORDENADAS</h1>
         <p>Uma lista ordenada começa com a tag &lt;ul&gt;. Cada item da lista começa com a tag &lt;li&gt;.</p>
 
            <p>Os itens da lista serão marcados com pequenos círculos por padrão.</p>
         <img class="imagem" src="imagem/ul.png" alt="imagem contendo instruções html para lista ordenada">
-
+        </section>
         
     </main>
     <footer class="flex-container" id="rodape"><!--rodapé-->
-        <p>Desenvolvido por Junior<br>
+        <p>Desenvolvido por Breno<br>
             Todos os direitos reservados &copy; 2022
         </p>
     </footer>
